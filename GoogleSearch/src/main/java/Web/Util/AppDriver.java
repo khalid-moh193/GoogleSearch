@@ -15,10 +15,7 @@ public class AppDriver {
     WebDriver driver;
 
     public WebDriver SeleniumDriverSetup(String browser) throws Exception {
-        //options.addArguments("user-data-dir=%LOCALAPPDATA%\\Google\\Chrome\\User Data");
-//         Check if parameter passed fromאtestng.xml is 'firefox'
         if (browser.equalsIgnoreCase("firefox")) {
-//            // Create firefox instance
             FirefoxOptions options = new FirefoxOptions();
 //            // Download from https://github.com/mozilla/geckodriver/releases
             String exePath =   System.getProperty("user.dir") + File.separator +"src/main/java/Web/Util/"+ File.separator +"geckodriver.exe";
@@ -32,13 +29,8 @@ public class AppDriver {
         else if (browser.equalsIgnoreCase("chrome")) {
             ChromeOptions options = new ChromeOptions();
             options.addArguments("--profile-directory=Default");
-            // Setting the webdriver.chrome.driver patch or simply add it to your system variables
             // Download from https://www.seleniumhq.org/download/
             String exePath;
-//            if (Property_Reader.getOS().equalsIgnoreCase("os"))
-//                exePath = System.getProperty("user.dir") + File.separator + "src/main/java/Web/Util/" + File.separator + "chromedriver";
-//            else
-            //   To be able to use it please download the selenium chrome driver and place it in util web package
             exePath = System.getProperty("user.dir") + File.separator + "src/main/java/Web/Util/" + File.separator + "chromedriver";
             System.setProperty("webdriver.chrome.driver", exePath);
             // Create chrome instance

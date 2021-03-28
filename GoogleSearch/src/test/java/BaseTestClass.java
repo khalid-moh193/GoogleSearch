@@ -7,20 +7,13 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.*;
 import org.testng.asserts.SoftAssert;
 
-import java.io.IOException;
-
 public abstract class BaseTestClass {
     public WebDriver driver;
     public SoftAssert softAssert;
-    AppDriver testInit;
 
     @Attachment(value = "{0}", type = "text/plain")
     public static String Save_TestLog(String message) {
         return message;
-    }
-
-    @BeforeSuite
-    void setUpTest() {
     }
 
     @BeforeClass
@@ -33,16 +26,11 @@ public abstract class BaseTestClass {
     @BeforeMethod
     void beforeMethod() {
         softAssert = new SoftAssert();
-
     }
 
     @AfterClass
     void afterClass() {
         driver.quit();
-    }
-
-    @AfterSuite(alwaysRun = true)
-    void tearDownTest() throws IOException {
     }
 
     @Attachment(value = "Page screenshot", type = "image/png")
