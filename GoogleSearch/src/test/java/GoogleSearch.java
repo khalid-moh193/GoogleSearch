@@ -35,8 +35,8 @@ public class GoogleSearch extends BaseTestClass {
 
         searchResultScreen = new SearchResultScreen(driver);
         DoAssert_equal(searchResultScreen.checkElementIsDisplayed(searchResultScreen.firstSearchResult), true, "search result is not displayed");
-        DoAssert_equal(searchResultScreen.checkElementIsDisplayed(searchResultScreen.instaBugLink2), true, "instabug ling is not displayed");
-        DoAssert_equal(searchResultScreen.checkElementIsDisplayed(searchResultScreen.instaBugLink), true, "instabug ling is not displayed");
+        DoAssert_equal(searchResultScreen.checkElementIsDisplayed(searchResultScreen.instaBugLink2), true, "instabug link is not displayed");
+        DoAssert_equal(searchResultScreen.checkElementIsDisplayed(searchResultScreen.instaBugLink), true, "instabug link is not displayed");
         DoAssert_equal(searchResultScreen.getSearchText(), searchKeyword, "search text is not existed");
         DoAssert_equal(searchResultScreen.getCurrentUrl().contains(searchKeyword), true, "URL doesn't contain the search keyword");
         DoAssert_equal(searchResultScreen.checkElementIsDisplayed(searchResultScreen.resultStats), true, "total records/results is not displayed"); // this verifies another test case, but i found that it can be included here
