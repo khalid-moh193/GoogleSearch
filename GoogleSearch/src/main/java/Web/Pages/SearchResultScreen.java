@@ -7,9 +7,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class SearchResultScreen extends Page {
     public By searchField = By.name("q");
-    public By firstSearchResult = By.className("yuRUbf");
-    public By instaBugLink = By.xpath("//a[@href='https://instabug.com/']");
-    public By instaBugLink2 = By.xpath("//div[normalize-space()='instabug.com']");
+    public By firstSearchResult = By.xpath("//a[@href='https://www.google.com/']");
+    public By googleLink = By.xpath("//div[normalize-space()='google.com']");
     public By resultStats = By.id("result-stats");
 
 
